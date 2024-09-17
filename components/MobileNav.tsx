@@ -13,7 +13,7 @@ const MobileNav = () => {
   const pathname = usePathname();
   const router = useRouter();
   return (
-    <Sheet open={openSheet} onOpenChange={setOpenSheet}>
+    <Sheet>
       <SheetTrigger className="flex items-center justify-center">
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>

@@ -19,7 +19,7 @@ const config: Config = {
 			lg: "960px",
 			xl: "1200px",
 		},
-		fontFamily:{
+		fontFamily: {
 			primary: "var(--font-jetbrainMono)",
 		},
 		extend: {
@@ -33,14 +33,16 @@ const config: Config = {
 					"to": { height: "0" },
 				},
 			},
-			colors:{
+			colors: {
 				primary: "#1c1c22",
-				accent:{
+				accent: {
 					DEFAULT: "#00ff99",
 					hover: "#00e187",
 				}
 			},
 			borderRadius: {
+				default: 'var(--radius - 2)',
+				xl: 'var(--radius + 2)',
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'

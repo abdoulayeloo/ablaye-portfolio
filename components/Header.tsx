@@ -15,12 +15,12 @@ const Header = () => {
           </h1>
         </Link>
         {/* desktop nav */}
-        <div className="hidden items-center gap-8 xl:flex">
+        <div className="hidden items-center gap-8 lg:flex">
           <Nav />
           <Link href={"/contact"}>
             <Button variant={"default"} size={"default"}>
               {" "}
-              Hire me
+              Collab
             </Button>
           </Link>
         </div>
