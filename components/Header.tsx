@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 py-8 text-white xl:py-12">
+    <header className="py-8 text-white xl:py-12">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href={"/"}>
@@ -17,7 +17,10 @@ const Header = () => {
         <div className="hidden items-center gap-8 xl:flex">
           <Nav />
           <Link href={"/contact"}>
-            <Button variant={"default"} size={"default"}> Hire me</Button>
+            <Button variant={"default"} size={"default"}>
+              {" "}
+              Hire me
+            </Button>
           </Link>
         </div>
         {/* mobile nav */}
