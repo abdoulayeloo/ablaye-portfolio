@@ -2,9 +2,9 @@
 import React from "react";
 import { AnimatePresence, delay, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-const PageTransition = ({children}: {children: React.ReactNode}) => {
+const PageTransition = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
-  console.log(pathname)
+  console.log(pathname);
   return (
     <AnimatePresence>
       <div key={pathname}>
@@ -14,10 +14,10 @@ const PageTransition = ({children}: {children: React.ReactNode}) => {
             opacity: 0,
             transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
           }}
-          className="h-screen pointer-events-none w-screen fixed bg-primary top-8"
+          className="pointer-events-none fixed top-8 h-screen w-screen bg-primary"
         />
-        {children}
       </div>
+      {children}
     </AnimatePresence>
   );
 };

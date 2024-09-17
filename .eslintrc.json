@@ -1,0 +1,11 @@
+{
+  "extends": "next/coe-web-vitals",
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/quotes": "off",
+    "quotes": [],
+    "avoidEscape": 0,
+    "allowTemplateLiterals": 0,
+    "no-useless-escape": 0
+  }
+}

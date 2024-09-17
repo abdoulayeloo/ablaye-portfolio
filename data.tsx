@@ -20,11 +20,13 @@ import {
   FaPhp,
   FaWordpress,
   FaGit,
+  FaPhoneAlt,
+  FaMapMarkedAlt,
 } from "react-icons/fa";
 import { SiNextdotjs, SiNodedotjs, SiTailwindcss } from "react-icons/si";
 export const navLinks = [
   {
-    name: "home",
+    name: "Accueil",
     href: "/",
   },
   {
@@ -32,11 +34,11 @@ export const navLinks = [
     href: "/services",
   },
   {
-    name: "resume",
+    name: "CV",
     href: "/resume",
   },
   {
-    name: "work",
+    name: "réalisations",
     href: "/work",
   },
   {
@@ -91,6 +93,7 @@ export const services = [
   {
     num: "01",
     title: "Developpment Web",
+    value: "dst",
     description:
       "lorem ipsum dolor sit am liber tempor a ante et just temp ullamcorper",
     href: "https://github.com/abdoulayeloo",
@@ -98,6 +101,7 @@ export const services = [
   {
     num: "02",
     title: "UI/UX",
+    value: "esc",
     description:
       "lorem ipsum dolor sit am liber tempor a ante et just temp ullamcorper",
     href: "https://github.com/abdoulayeloo",
@@ -105,6 +109,7 @@ export const services = [
   {
     num: "03",
     title: "Logo Design",
+    value: "cst",
     description:
       "lorem ipsum dolor sit am liber tempor a ante et just temp ullamcorper",
     href: "https://github.com/abdoulayeloo",
@@ -112,6 +117,7 @@ export const services = [
   {
     num: "04",
     title: "SEO Optimisation",
+    value: "mst",
     description:
       "lorem ipsum dolor sit am liber tempor a ante et just temp ullamcorper",
     href: "https://github.com/abdoulayeloo",
@@ -131,7 +137,7 @@ export const resume = {
       },
       {
         fieldName: "Téléphone",
-        fieldValue: "(+221 77 778 06 20)",
+        fieldValue: "(+221) 77 778 06 20",
         fieldIcon: FaPhone,
       },
       {
@@ -289,4 +295,123 @@ export const resume = {
       },
     ],
   },
+  projets: [
+    {
+      num: "01",
+      category: "Next.js",
+      title: "Next Auth V5",
+      live: "#",
+      github: "https://github.com/abdoulayeloo/next-auth-v5",
+      description:
+        "J'ai eu à réaliser un projet avec NextAuth.js v5, une bibliothèque puissante pour l'authentification dans les applications Next.js. Ce projet m'a permis de configurer un système d'authentification sécurisé avec des fournisseurs OAuth comme Google et GitHub, tout en gérant les sessions utilisateur de manière efficace. J'ai également personnalisé la gestion des tokens et des sessions via l'API middleware, et intégré une base de données pour stocker et gérer les utilisateurs. Grâce à l'utilisation de Typescript, j'ai assuré une meilleure robustesse et maintenabilité du code.",
+      stack: [
+        { name: "html 5" },
+        { name: "tailwind.css" },
+        { name: "Next.js" },
+        { name: "typescript" },
+        { name: "prisma" },
+        { name: "mysql" },
+      ],
+    },
+    {
+      num: "02",
+      category: "React Native",
+      title: "Blanchisserie Mobile App",
+      live: "#",
+      github: "https://github.com/abdoulayeloo/Blanchisserie",
+      description:
+        "Un projet développé avec React Native, une bibliothèque puissante permettant de créer des applications mobiles natives tout en utilisant des technologies web comme JavaScript. L'application est compatible avec les deux principales plateformes mobiles, iOS et Android, offrant une expérience utilisateur fluide et native sur chaque appareil. Grâce à React Native, j'ai pu concevoir une interface utilisateur réactive et optimisée, en utilisant des composants natifs pour garantir des performances optimales. Le projet inclut des fonctionnalités de gestion des utilisateurs, d'authentification, et d'intégration avec des services backend, tout en garantissant une expérience homogène sur toutes les plateformes. Les technologies complémentaires comme React Redux pour la gestion de l'état, Prisma pour les interactions avec la base de données, et Tailwind CSS pour la mise en page rapide et stylée ont été utilisées pour construire une solution complète et robuste.",
+      stack: [
+        { name: "html 5" },
+        { name: "tailwind.css" },
+        { name: "react native" },
+        { name: "react redux" },
+        { name: "prisma" },
+        { name: "mysql" },
+      ],
+    },
+    {
+      num: "03",
+      category: "FullStack",
+      title: "SenRestaurant",
+      live: "#",
+      github: "https://github.com/abdoulayeloo/senRestaurant",
+      description:
+        "Un projet développé avec React Native, une bibliothèque puissante permettant de créer des applications mobiles natives tout en utilisant des technologies web comme JavaScript. L'application est compatible avec les deux principales plateformes mobiles, iOS et Android, offrant une expérience utilisateur fluide et native sur chaque appareil. Grâce à React Native, j'ai pu concevoir une interface utilisateur réactive et optimisée, en utilisant des composants natifs pour garantir des performances optimales. Le projet inclut des fonctionnalités de gestion des utilisateurs, d'authentification, et d'intégration avec des services backend, tout en garantissant une expérience homogène sur toutes les plateformes. Les technologies complémentaires comme React Redux pour la gestion de l'état, Prisma pour les interactions avec la base de données, et Tailwind CSS pour la mise en page rapide et stylée ont été utilisées pour construire une solution complète et robuste.",
+      stack: [
+        { name: "html 5" },
+        { name: "tailwind.css" },
+        { name: "react native" },
+        { name: "react redux" },
+        { name: "firebase" },
+      ],
+    },
+    {
+      num: "04",
+      category: "Next.js",
+      title: "Next.js Dashboard",
+      live: "#",
+      github: "https://github.com/abdoulayeloo/next-s-dashboard",
+      description:
+        "Un projet FullStack développé avec Next.js, un framework puissant basé sur React permettant de créer des applications web modernes et performantes. Le tableau de bord offre une interface utilisateur interactive et réactive, permettant une gestion optimisée des données en temps réel. Grâce à la puissance de Next.js, l'application bénéficie du rendu côté serveur (SSR) et du rendu statique (SSG), améliorant ainsi les performances et le référencement. Le projet inclut des fonctionnalités d'authentification, de gestion de contenu et d'intégration avec des services backend, garantissant une solution complète et flexible. Les technologies complémentaires telles que Tailwind CSS pour la mise en page rapide et stylée sont également utilisées pour offrir une expérience utilisateur optimale.",
+      stack: [
+        { name: "html 5" },
+        { name: "tailwind.css" },
+        { name: "next.js" },
+        { name: "react" },
+        { name: "prisma" },
+        { name: "mysql" },
+      ],
+    },
+  ],
 };
+
+export const contact = {
+  title: "Collaborons!",
+  description:
+    "N'hésitez pas à me contacter si vous avez de collaborer ou si vous avez des questions sur mon travail.",
+  info: [
+    {
+      icon: FaPhoneAlt,
+      title: "Téléphone",
+      description: "(+221) 77 778 06 20",
+    },
+    {
+      icon: FaEnvelope,
+      title: "Email",
+      description: "faarame@gmail.com",
+    },
+    {
+      icon: FaMapMarkedAlt,
+      title: "Adresse",
+      description: "HLM Paris N•67 Guédiawaye, Dakar",
+    },
+  ],
+};
+
+export const choix = [
+  {
+    title: "Site Vitrine",
+    value: "dst",
+  },
+  {
+    title: "Site Catalogue",
+    value: "ast",
+  },
+  {
+    title: "Site E-commerce",
+    value: "abt",
+  },
+  {
+    title: "SEO Optimisation",
+    value: "mst",
+  },
+  {
+    title: "UI/UX",
+    value: "esc",
+  },
+  {
+    title: "Logo Design",
+    value: "cst",
+  },
+];

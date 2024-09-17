@@ -16,13 +16,24 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         {/* Logo */}
-        <div className="text-2xl pt-14 text-center font-semibold">
-          Ablaye<span className="text-accent">.</span>{" "}
+        <div className="pt-14 text-center text-2xl font-semibold">
+          <Link href={"/"}>
+            Ablaye<span className="text-accent">.</span>{" "}
+          </Link>
         </div>
         {/* nav */}
-        <nav className="flex flex-col items-center justify-center space-y-3 ">
+        <nav className="flex flex-col items-center justify-center space-y-3">
           {navLinks.map((link, index) => (
-            <Link key={index} className={`${link.href === pathname && "text-accent border-b-2  border-b-accent"} transition-colors hover:text-accent-hover capitalize w-fit`} href={link.href}>{link.name}</Link>
+            <Link
+              key={index}
+              className={`${
+                link.href === pathname &&
+                "text-accent border-b-2  border-b-accent"
+              } transition-colors hover:text-accent-hover capitalize w-fit`}
+              href={link.href}
+            >
+              {link.name}
+            </Link>
           ))}
         </nav>
       </SheetContent>
