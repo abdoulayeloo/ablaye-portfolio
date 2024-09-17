@@ -23,7 +23,7 @@ const Footer = () => {
           <ul>
             <h3 className="mb-2 text-xl font-bold text-accent">Services</h3>
             {dt.services.map((item, index) => (
-              <Link href="/service">
+              <Link href="/services">
                 <li className="mb-1 text-sm text-white/60">{item.title}</li>
               </Link>
             ))}
