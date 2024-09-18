@@ -14,35 +14,59 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
+interface FormData {
+  prenom: string;
+  nom: string;
+  email: string;
+  telephone: string;
+  service: string;
+  message: string;
+}
+
 const ContactForm: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
-  const [selectedService, setSelectedService] = useState<string>("");
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-  const [isSent, setIsSent] = useState<boolean>(false);
-  const [submitted, setSubmitted] = useState<boolean>(false);
+  const [formData, setFormData] = useState<FormData>({
+    prenom: "",
+    nom: "",
+    email: "",
+    telephone: "",
+    service: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSent, setIsSent] = useState(false);
 
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
 
     if (form.current) {
+      setIsSubmitting(true);
+
       emailjs
         .sendForm(
           process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
           process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
           form.current,
-          process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+          process.env.NEXT_PUBLIC_EMAILJS_USER_ID
         )
         .then(
           (result) => {
             console.log("E-mail envoyé avec succès :", result.text);
-            setIsSent(true);
             setIsSubmitting(false);
-            setSubmitted(true);
+            setIsSent(true);
+            // Réinitialiser le formulaire
+            setFormData({
+              prenom: "",
+              nom: "",
+              email: "",
+              telephone: "",
+              service: "",
+              message: "",
+            });
           },
           (error) => {
             console.error("Erreur lors de l'envoi de l'e-mail :", error.text);
             setIsSubmitting(false);
-            setSubmitted(false);
           }
         );
     }
@@ -56,15 +80,54 @@ const ContactForm: React.FC = () => {
     >
       <h3 className="text-4xl text-accent">{contact.title}</h3>
       <p className="text-white/60">{contact.description}</p>
+
+      {isSent && (
+        <p className="text-green-500">
+          Votre message a été envoyé avec succès !
+        </p>
+      )}
+
       {/* Champs d'entrée */}
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-        <Input type="text" placeholder="Prénom" name="prenom" />
-        <Input type="text" placeholder="Nom" name="nom" />
-        <Input type="email" placeholder="Email" name="email" />
-        <Input type="text" placeholder="Téléphone" name="telephone" />
+        <Input
+          type="text"
+          placeholder="Prénom"
+          name="prenom"
+          value={formData.prenom}
+          onChange={(e) => setFormData({ ...formData, prenom: e.target.value })}
+        />
+        <Input
+          type="text"
+          placeholder="Nom"
+          name="nom"
+          value={formData.nom}
+          onChange={(e) => setFormData({ ...formData, nom: e.target.value })}
+        />
+        <Input
+          type="email"
+          placeholder="Email"
+          name="email"
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+        />
+        <Input
+          type="text"
+          placeholder="Téléphone"
+          name="telephone"
+          value={formData.telephone}
+          onChange={(e) =>
+            setFormData({ ...formData, telephone: e.target.value })
+          }
+        />
       </div>
+
       {/* Sélection du service */}
-      <Select onValueChange={(value: string) => setSelectedService(value)}>
+      <Select
+        value={formData.service}
+        onValueChange={(value: string) =>
+          setFormData({ ...formData, service: value })
+        }
+      >
         <SelectTrigger className="w-full">
           <SelectValue placeholder="Choisissez un service" />
         </SelectTrigger>
@@ -79,19 +142,22 @@ const ContactForm: React.FC = () => {
           </SelectGroup>
         </SelectContent>
       </Select>
-      <input type="hidden" name="service" value={selectedService} />
+
       {/* Zone de texte */}
       <Textarea
         className="h-[200px]"
         placeholder="Message ..."
         name="message"
+        value={formData.message}
+        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
       />
+
+      {/* Bouton d'envoi */}
       <Button
         size="sm"
         className="max-w-fit"
-        disabled={isSubmitting}
-
         type="submit"
+        disabled={isSubmitting}
       >
         {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
       </Button>
