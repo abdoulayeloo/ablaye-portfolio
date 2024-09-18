@@ -374,11 +374,13 @@ export const contact = {
     {
       icon: FaPhoneAlt,
       title: "Téléphone",
+      href: "https://wa.me/+221777780620",
       description: "(+221) 77 778 06 20",
     },
     {
       icon: FaEnvelope,
       title: "Email",
+      href: "mailto:faarame@gmail.com",
       description: "faarame@gmail.com",
     },
     {

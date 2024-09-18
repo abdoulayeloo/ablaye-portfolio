@@ -1,18 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectGroup,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { choix, contact, services } from "@/data";
-import { Textarea } from "@/components/ui/textarea";
+import { contact } from "@/data";
+import ContactForm from "@/components/ContactForm";
+import Link from "next/link";
+import { it } from "node:test";
 
 const page = () => {
   return (
@@ -28,46 +19,7 @@ const page = () => {
         <div className="flex flex-col gap-[30px] xl:flex-row">
           {/* form */}
           <div className="order-2 xl:order-none xl:w-[54%]">
-            <form
-              action=""
-              className="flex flex-col gap-6 rounded-xl bg-[#27272c] p-10"
-            >
-              <h3 className="text-4xl text-accent">{contact.title}</h3>
-              <p className="text-white/60">{contact.description}</p>
-              {/* input */}
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-                <Input type="prenom" placeholder="Prénom" />
-                <Input type="nom" placeholder="Nom" />
-                <Input type="email" placeholder="Email" />
-                <Input type="telephone" placeholder="Téléphone" />
-              </div>
-              {/* select */}
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue
-                    placeholder="Choisis un service"
-                    className=""
-                  ></SelectValue>
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Choisis un service</SelectLabel>
-                    {choix.map((item, index) => {
-                      return (
-                        <SelectItem key={index} value={item.value}>
-                          {item.title}
-                        </SelectItem>
-                      );
-                    })}
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-              {/* TextArea */}
-              <Textarea className="h-[200px]" placeholder="Message ..." />
-              <Button size={"sm"} className="max-w-fit">
-                Envoyer le message
-              </Button>
-            </form>
+            <ContactForm />
           </div>
           {/* info */}
           <div className="order-1 mb-8 flex flex-1 items-center xl:order-none xl:mb-0 xl:justify-end">
@@ -82,8 +34,18 @@ const page = () => {
                       <item.icon className="w-full text-[28px]" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-white/60">{item.title}</p>
-                      <h3 className="text-xl">{item.description} </h3>
+                      <p className="text-white/60">
+                        <a href={item.href}>{item.title}</a>
+                      </p>
+                      <h3 className="text-xl">
+                        {item.href ? (
+                          <Link target="_blank" href={item.href}>
+                            {item.description}
+                          </Link>
+                        ) : (
+                          item.description
+                        )}
+                      </h3>
                     </div>
                   </li>
                 );

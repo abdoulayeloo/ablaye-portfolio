@@ -14,7 +14,7 @@ const jetbrainMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Ablaye Portofolio",
-  description: "Le portofolio pour collaborator avecc nou !",
+  description: "Le portofolio pour collaborator avec nous",
 };
 
 export default function RootLayout({
@@ -24,10 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${jetbrainMono.variable}`}>
+      <body className={`${jetbrainMono.variable} min-h-screen`}>
         <Header />
         <StairTransition />
-        {children}
+        <PageTransition children={children} />
         <Footer />
       </body>
     </html>
