@@ -5,14 +5,14 @@ import Image from "next/image";
 
 const Photo = () => {
   return (
-    <div className="w-full h-full relative">
+    <div className="relative h-full w-full">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
           transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
         }}
-        className="absolute rounded-full overflow-hidden mix-blend-lighten w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]"
+        className="absolute h-[298px] w-[298px] overflow-hidden rounded-full mix-blend-lighten xl:h-[498px] xl:w-[498px]"
       >
         <Image
           className="object-contain"
@@ -25,7 +25,7 @@ const Photo = () => {
       </motion.div>
       {/* cercle */}
       <motion.svg
-        className={"w-[300px] z-20 h-[300px] xl:w-[506px] xl:h-[506px]"}
+        className={"z-20 h-[300px] w-[300px] xl:h-[506px] xl:w-[506px]"}
         fill={"transparent"}
         viewBox={"0 0 506 506"}
         xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ const Photo = () => {
           cx="253"
           cy="253"
           r="250"
-          stroke="#00ff99"
+          stroke="#b591a7"
           stroke-width="4"
           strokeLinecap={"round"}
           strokeLinejoin={"round"}
@@ -46,7 +46,7 @@ const Photo = () => {
           transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
         />
       </motion.svg>
-      <div className="absolute -z-10 bg-gradient-to-t from-primary w-[298px] h-[298px] xl:h-[498px] xl:w-[498px] bottom-0" />
+      <div className="absolute bottom-0 -z-10 h-[298px] w-[298px] bg-gradient-to-t from-primary xl:h-[498px] xl:w-[498px]" />
     </div>
   );
 };
