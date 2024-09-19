@@ -1,5 +1,5 @@
 "use client";
-import { resume as rs } from "@/data";
+import { cv as rs } from "@/data";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -29,13 +29,13 @@ const page = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="flex min-h-[80vh] items-center justify-center py-12 xl:py-0"
+      className="flex min-h-[70vh] items-center justify-center py-4 xl:py-0"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="order-2 flex w-full flex-col xl:order-none xl:h-[460px] xl:w-[50%] xl:justify-between">
+          <div className="order-2 flex w-full flex-col xl:order-none xl:min-h-[460px] xl:w-[50%] xl:justify-between">
             <div className="flex h-[50%] flex-col gap-[30px]">
               {/* project num */}
               <div className="text-outline text-8xl font-extrabold leading-none text-transparent">
@@ -46,7 +46,7 @@ const page = () => {
                 {projet.category}{" "}
               </h2>
               {/* Description */}
-              <p className="text-white/60">{projet.description}</p>
+              <p className="text-justify text-white/60">{projet.description}</p>
               {/* Stack */}
               <ul className="flex flex-wrap gap-4">
                 {projet.stack.map((item, index) => {

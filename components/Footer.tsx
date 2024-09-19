@@ -14,7 +14,7 @@ const Footer = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
       }}
     >
       <div className="container mx-auto">
@@ -40,7 +40,7 @@ const Footer = () => {
           </ul>
           <ul>
             <h3 className="mb-2 text-xl font-bold text-accent">Projets</h3>
-            {dt.resume.projets.map((item, index) => (
+            {dt.cv.projets.map((item, index) => (
               <Link href={item.github} target="_blank">
                 <li className="mb-1 text-sm capitalize text-white/60">
                   {item.title}

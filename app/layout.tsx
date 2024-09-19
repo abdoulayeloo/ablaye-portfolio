@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${jetbrainMono.variable} min-h-screen`}>
+      <body className={`${jetbrainMono.variable}`}>
         <Header />
         <StairTransition />
         <PageTransition children={children} />

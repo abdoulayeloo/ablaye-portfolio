@@ -1,4 +1,3 @@
-import { title } from "process";
 import {
   FaGithub,
   FaFacebook,
@@ -22,6 +21,8 @@ import {
   FaGit,
   FaPhoneAlt,
   FaMapMarkedAlt,
+  FaDev,
+  FaLanguage,
 } from "react-icons/fa";
 import { SiNextdotjs, SiNodedotjs, SiTailwindcss } from "react-icons/si";
 export const navLinks = [
@@ -35,11 +36,11 @@ export const navLinks = [
   },
   {
     name: "CV",
-    href: "/resume",
+    href: "/cv",
   },
   {
     name: "réalisations",
-    href: "/work",
+    href: "/realisations",
   },
   {
     name: "contact",
@@ -73,11 +74,11 @@ export const socials = [
 export const stats = [
   {
     num: 3,
-    text: "Année d'expérience",
+    text: "Années d'expérience",
   },
   {
     num: 14,
-    text: "Projet réalisés",
+    text: "Projets réalisés",
   },
   {
     num: 9,
@@ -92,43 +93,60 @@ export const stats = [
 export const services = [
   {
     num: "01",
-    title: "Developpment Web",
+    title: "Développement Web",
     value: "dst",
     description:
-      "lorem ipsum dolor sit am liber tempor a ante et just temp ullamcorper",
+      "Faites créer votre site web avec des technologies modernes comme Next.js ou Laravel, offrant performance, sécurité et évolutivité.",
     href: "https://github.com/abdoulayeloo",
   },
   {
     num: "02",
-    title: "UI/UX",
-    value: "esc",
+    title: "Site Vitrine",
+    value: "dst",
     description:
-      "lorem ipsum dolor sit am liber tempor a ante et just temp ullamcorper",
+      "Conception de sites vitrines attractifs pour présenter votre entreprise en ligne, avec une mise en avant de vos services et produits.",
     href: "https://github.com/abdoulayeloo",
   },
   {
     num: "03",
-    title: "Logo Design",
-    value: "cst",
+    title: "Site Catalogue",
+    value: "dst",
     description:
-      "lorem ipsum dolor sit am liber tempor a ante et just temp ullamcorper",
+      "Développez un site catalogue sur mesure pour présenter vos produits en ligne avec une gestion facile des articles et des catégories.",
     href: "https://github.com/abdoulayeloo",
   },
   {
     num: "04",
+    title: "Site E-commerce",
+    value: "dst",
+    description:
+      "Créez un site e-commerce complet avec une intégration de paiement sécurisé, gestion des commandes et une expérience d'achat fluide.",
+    href: "https://github.com/abdoulayeloo",
+  },
+  {
+    num: "06",
+    title: "Logo Design",
+    value: "cst",
+    description:
+      "Conception de logos sur mesure qui reflètent l'essence de votre marque et captivent l'attention de vos clients.",
+    href: "https://github.com/abdoulayeloo",
+  },
+  {
+    num: "07",
     title: "SEO Optimisation",
     value: "mst",
     description:
-      "lorem ipsum dolor sit am liber tempor a ante et just temp ullamcorper",
+      "Optimisation de votre site pour les moteurs de recherche, augmentant sa visibilité et attirant un trafic ciblé grâce à des techniques SEO avancées.",
     href: "https://github.com/abdoulayeloo",
   },
 ];
 
-export const resume = {
+export const cv = {
   about: {
-    title: "A propos de moi",
+    title: "À propos de moi",
+    icon: "/assets/resume/about.svg",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel pharetra nisi, vel consectetur neque. Sed viverra, dui vitae dignissim tristique, enim felis consectetur neque, vitae commodo velit velit nec nunc.",
+      "Je suis Ablaye LO, développeur web passionné avec une certaine expertise dans les technologies modernes comme Next.js, React, et Laravel. Mon objectif est de créer des solutions numériques sur mesure qui répondent aux besoins spécifiques de mes clients. Je me consacre à offrir des expériences utilisateur de qualité et des performances optimales à travers mes compétences en développement full-stack.",
     info: [
       {
         fieldName: "Nom",
@@ -157,18 +175,18 @@ export const resume = {
       },
       {
         fieldName: "Email",
-        fieldValue: "ablayeloo@gmail.com",
+        fieldValue: "faarame@gmail.com",
         fieldIcon: FaAt,
       },
       {
         fieldName: "FreeLance",
         fieldValue: "Disponible",
-        fieldIcon: FaAt,
+        fieldIcon: FaDev,
       },
       {
         fieldName: "Languges",
         fieldValue: "Français, Anglais, Arabe, Wolof",
-        fieldIcon: FaAt,
+        fieldIcon: FaLanguage,
       },
     ],
   },
@@ -176,7 +194,7 @@ export const resume = {
     icon: "/assets/resume/badge.svg",
     title: "Mon expérience",
     description:
-      "Lorem Ipsum is Lorem Ipsum is exactly equivalent to Lorem Ipsum",
+      "Avec plusieurs années d'expérience dans le développement web et la gestion de contenu, j'ai travaillé sur des projets variés allant du développement FullStack à la création de sites web et à la gestion de contenu. Mon parcours m'a permis de maîtriser des technologies modernes et d'acquérir des compétences solides en gestion de projets numériques.",
     items: [
       {
         company: "Likagroupe",
@@ -204,11 +222,11 @@ export const resume = {
     icon: "/assets/resume/cap.svg",
     title: "Mon éducation",
     description:
-      "Lorem Ipsum is Lorem Ipsum is exactly equivalent to Lorem Ipsum",
+      "Un parcours académique solide avec une spécialisation en systèmes, réseaux et télécoms, complété par des formations continues en développement web et programmation avancée.",
     items: [
       {
         institution: "Université Alioune Diop",
-        degree: "Licence Professionnelle en Systéme Réseaux & Télécom",
+        degree: "Licence Professionnelle en Systèmes Réseaux & Télécom",
         duration: "Nov 2017 - Juillet 2021",
       },
       {
@@ -238,28 +256,28 @@ export const resume = {
       },
       {
         institution: "Lycée Limamoulaye",
-        degree: "Baccalauréat Scientifiques (Serie S2)",
-        duration: "2013 - 2027",
+        degree: "Baccalauréat Scientifique (Série S2)",
+        duration: "2013 - 2017",
       },
     ],
   },
   skills: {
-    // icon: "/assets/resume/cap.svg",
-    title: "Mes competences",
+    icon: "/assets/resume/skills.svg",
+    title: "Mes compétences",
     description:
-      "Lorem Ipsum is Lorem Ipsum is exactly equivalent to Lorem Ipsum",
+      "Maîtrise des langages de programmation et frameworks modernes, avec une expertise dans le développement full-stack et la gestion de projets web.",
     skillList: [
       {
         icon: FaHtml5,
-        skillName: "html 5",
+        skillName: "HTML 5",
       },
       {
         icon: FaCss3,
-        skillName: "ccs 3",
+        skillName: "CSS 3",
       },
       {
         icon: FaJs,
-        skillName: "javascript",
+        skillName: "JavaScript",
       },
       {
         icon: SiNodedotjs,
@@ -267,31 +285,31 @@ export const resume = {
       },
       {
         icon: FaReact,
-        skillName: "react.js",
+        skillName: "React.js",
       },
       {
         icon: SiNextdotjs,
-        skillName: "next.js",
+        skillName: "Next.js",
       },
       {
         icon: SiTailwindcss,
-        skillName: "tailwind.css",
+        skillName: "Tailwind CSS",
       },
       {
         icon: FaPhp,
-        skillName: "php",
+        skillName: "PHP",
       },
       {
         icon: FaLaravel,
-        skillName: "laravel",
+        skillName: "Laravel",
       },
       {
         icon: FaWordpress,
-        skillName: "wordpress",
+        skillName: "WordPress",
       },
       {
         icon: FaGit,
-        skillName: "git",
+        skillName: "Git",
       },
     ],
   },

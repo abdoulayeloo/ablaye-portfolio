@@ -7,7 +7,7 @@ const StairTransition = () => {
   const pathname = usePathname();
   return (
     <>
-      <AnimatePresence mode="wait">Â
+      <AnimatePresence mode="wait">
         <div className="pointer-events-none fixed inset-0 z-40 flex h-screen w-screen">
           <Stairs />
         </div>

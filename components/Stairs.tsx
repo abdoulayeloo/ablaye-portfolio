@@ -7,24 +7,25 @@ const stairAnimation = {
   exit: { top: ["100%", "0%"] },
 };
 const Stairs = () => {
-  return(
-  <>
-    {[...Array(6)].map((_, index) => (
-      <motion.div
-        key={index}
-        variants={stairAnimation}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        transition={{
-          duration: 0.3,
-          ease: "easeInOut",
-          delay: (index) * 0.1
-        }}
-        className="h-full w-full bg-white relative"
-      />
-    ))}
-  </>);
+  return (
+    <>
+      {[...Array(6)].map((_, index) => (
+        <motion.div
+          key={index}
+          variants={stairAnimation}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut",
+            delay: index * 0.1,
+          }}
+          className="relative h-full w-full bg-white"
+        />
+      ))}
+    </>
+  );
 };
 
 export default Stairs;
