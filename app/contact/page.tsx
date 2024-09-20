@@ -18,11 +18,11 @@ const page = () => {
       <div className="container mx-auto">
         <div className="flex flex-col gap-[30px] xl:flex-row">
           {/* form */}
-          <div className="order-2 xl:order-none xl:w-[54%]">
+          <div className="order-1 xl:order-none xl:w-[54%]">
             <ContactForm />
           </div>
           {/* info */}
-          <div className="order-1 mb-8 flex flex-1 items-center xl:order-none xl:mb-0 xl:justify-end">
+          <div className="order-2 mb-8 flex flex-1 items-center xl:order-none xl:mb-0 xl:justify-end">
             <ul className="flex flex-col gap-6">
               {contact.info.map((item, index) => {
                 return (

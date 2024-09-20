@@ -160,7 +160,7 @@ export const cv = {
       },
       {
         fieldName: "Expérience",
-        fieldValue: "+5 ans",
+        fieldValue: "3 ans",
         fieldIcon: FaExpand,
       },
       {
@@ -321,7 +321,7 @@ export const cv = {
       live: "#",
       github: "https://github.com/abdoulayeloo/next-auth-v5",
       description:
-        "J'ai eu à réaliser un projet avec NextAuth.js v5, une bibliothèque puissante pour l'authentification dans les applications Next.js. Ce projet m'a permis de configurer un système d'authentification sécurisé avec des fournisseurs OAuth comme Google et GitHub, tout en gérant les sessions utilisateur de manière efficace. J'ai également personnalisé la gestion des tokens et des sessions via l'API middleware, et intégré une base de données pour stocker et gérer les utilisateurs. Grâce à l'utilisation de Typescript, j'ai assuré une meilleure robustesse et maintenabilité du code.",
+        "J'ai réalisé un projet utilisant NextAuth.js v5 pour implémenter une authentification sécurisée dans une application Next.js. J'ai configuré des fournisseurs OAuth tels que Google et GitHub, géré efficacement les sessions utilisateur, personnalisé la gestion des tokens et des sessions via l'API middleware, et intégré une base de données pour la gestion des utilisateurs. L'utilisation de TypeScript a renforcé la robustesse et la maintenabilité du code.",
       stack: [
         { name: "html 5" },
         { name: "tailwind.css" },
@@ -387,7 +387,7 @@ export const cv = {
 export const contact = {
   title: "Collaborons!",
   description:
-    "N'hésitez pas à me contacter si vous avez de collaborer ou si vous avez des questions sur mon travail.",
+    "N'hésitez pas à me contacter pour toute collaboration ou si vous souhaitez en savoir plus sur mon travail.",
   info: [
     {
       icon: FaPhoneAlt,
@@ -404,6 +404,7 @@ export const contact = {
     {
       icon: FaMapMarkedAlt,
       title: "Adresse",
+      href: "https://maps.app.goo.gl/2febQg51DCKzMPyg7", 
       description: "HLM Paris N•67 Guédiawaye, Dakar",
     },
   ],

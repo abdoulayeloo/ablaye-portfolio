@@ -123,7 +123,7 @@ const ContactForm: React.FC = () => {
 
       {/* Champs d'entrée */}
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-        <div className="w-full">
+        <div className="grid w-full grid-cols-1">
           <Input
             type="text"
             placeholder="Prénom"
@@ -135,12 +135,12 @@ const ContactForm: React.FC = () => {
             className={errors.prenom ? "border-red-500" : "w-full"}
           />
           {errors.prenom && (
-            <p className="text-sm text-red-500 transition-all duration-500 ease-in-out">
+            <p className="text-sm text-red-500">
               {errors.prenom}
             </p>
           )}
         </div>
-        <div className="w-full">
+        <div className="grid w-full grid-cols-1">
           <Input
             type="text"
             placeholder="Nom"
@@ -150,12 +150,12 @@ const ContactForm: React.FC = () => {
             className={errors.nom ? "border-red-500" : "w-full"}
           />
           {errors.nom && (
-            <p className="text-sm text-red-500 transition-all duration-500 ease-in-out">
+            <p className="text-sm text-red-500">
               {errors.nom}
             </p>
           )}
         </div>
-        <div className="w-full">
+        <div className="grid w-full grid-cols-1">
           <Input
             type="email"
             placeholder="Email"
@@ -167,12 +167,12 @@ const ContactForm: React.FC = () => {
             className={errors.email ? "border-red-500" : "w-full"}
           />
           {errors.email && (
-            <p className="text-sm text-red-500 transition-all duration-500 ease-in-out">
+            <p className="text-sm text-red-500">
               {errors.email}
             </p>
           )}
         </div>
-        <div className="w-full">
+        <div className="grid w-full grid-cols-1">
           <Input
             type="text"
             placeholder="Téléphone"
@@ -184,7 +184,7 @@ const ContactForm: React.FC = () => {
             className={errors.telephone ? "border-red-500" : "w-full"}
           />
           {errors.telephone && (
-            <p className="text-sm text-red-500 transition-all duration-500 ease-in-out">
+            <p className="text-sm text-red-500">
               {errors.telephone}
             </p>
           )}
@@ -233,7 +233,7 @@ const ContactForm: React.FC = () => {
           }
         />
         {errors.message && (
-          <p className="text-sm text-red-500 transition-all duration-500 ease-in-out">
+          <p className="text-sm text-red-500">
             {errors.message}
           </p>
         )}
