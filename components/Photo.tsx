@@ -15,10 +15,10 @@ const Photo = () => {
         className="absolute h-[298px] w-[298px] overflow-hidden rounded-full mix-blend-lighten xl:h-[498px] xl:w-[498px]"
       >
         <Image
-          className="object-contain"
+          className="object-contain opacity-20"
           priority
           quality={"100"}
-          src="/assets/photo.png"
+          src="/assets/photo-3.png"
           fill
           alt="Photo"
         />
@@ -31,11 +31,11 @@ const Photo = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <motion.circle
-          cx="253"
+        className="" cx="253"
           cy="253"
           r="250"
-          stroke="#00ff99"
-          stroke-width="4"
+          stroke="#fff"
+          stroke-width="1"
           strokeLinecap={"round"}
           strokeLinejoin={"round"}
           initial={{ strokeDasharray: "24 10 0 0" }}

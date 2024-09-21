@@ -77,7 +77,7 @@ export const stats = [
     text: "Années d'expérience",
   },
   {
-    num: 14,
+    num: 6,
     text: "Projets réalisés",
   },
   {
@@ -85,7 +85,7 @@ export const stats = [
     text: "Technologies maîtrisées",
   },
   {
-    num: 511,
+    num: 137,
     text: "Code Commits",
   },
 ];
@@ -94,7 +94,7 @@ export const services = [
   {
     num: "01",
     title: "Développement Web",
-    value: "dst",
+    value: "cst",
     description:
       "Faites créer votre site web avec des technologies modernes comme Next.js ou Laravel, offrant performance, sécurité et évolutivité.",
     href: "https://github.com/abdoulayeloo",
@@ -102,7 +102,7 @@ export const services = [
   {
     num: "02",
     title: "Site Vitrine",
-    value: "dst",
+    value: "nst",
     description:
       "Conception de sites vitrines attractifs pour présenter votre entreprise en ligne, avec une mise en avant de vos services et produits.",
     href: "https://github.com/abdoulayeloo",
@@ -118,17 +118,9 @@ export const services = [
   {
     num: "04",
     title: "Site E-commerce",
-    value: "dst",
+    value: "dse",
     description:
       "Créez un site e-commerce complet avec une intégration de paiement sécurisé, gestion des commandes et une expérience d'achat fluide.",
-    href: "https://github.com/abdoulayeloo",
-  },
-  {
-    num: "06",
-    title: "Logo Design",
-    value: "cst",
-    description:
-      "Conception de logos sur mesure qui reflètent l'essence de votre marque et captivent l'attention de vos clients.",
     href: "https://github.com/abdoulayeloo",
   },
   {
@@ -137,6 +129,14 @@ export const services = [
     value: "mst",
     description:
       "Optimisation de votre site pour les moteurs de recherche, augmentant sa visibilité et attirant un trafic ciblé grâce à des techniques SEO avancées.",
+    href: "https://github.com/abdoulayeloo",
+  },
+  {
+    num: "06",
+    title: "Logo Design",
+    value: "cst",
+    description:
+      "Conception de logos sur mesure qui reflètent l'essence de votre marque et captivent l'attention de vos clients.",
     href: "https://github.com/abdoulayeloo",
   },
 ];

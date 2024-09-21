@@ -6,7 +6,7 @@ import { BsArrowDown, BsArrowDownRight } from "react-icons/bs"
 
 const page = () => {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
+    <section className="flex min-h-[80vh] flex-col justify-center py-12 xl:py-0">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -14,23 +14,23 @@ const page = () => {
             opacity: 1,
             transition: { delay: 1.4, duration: 0.4, ease: easeInOut },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-[4rem]"
+          className="grid grid-cols-1 gap-[4rem] md:grid-cols-2"
         >
           {services.map((item, index)=>(
-            <div  className="flex flex-col flex-1 justify-center gap-6 group" key={index}>
-              <div className="w-full flex items-center justify-between">
-                <div className="text-outline group-hover:text-outline-hover transition-all duration-500 text-transparent text-5xl font-extrabold">
+            <div  className="group flex flex-1 flex-col justify-center gap-6" key={index}>
+              <div className="flex w-full items-center justify-between">
+                <div className="text-outline group-hover:text-outline-hover text-5xl font-extrabold text-transparent transition-all duration-500">
                   {item.num}</div>
-                <Link href={item.href} className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex items-center justify-center group-hover:-rotate-45 ">
-                <BsArrowDownRight className="text-primary text-3xl" />
+                <Link href={item.href} className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white transition-all duration-500 group-hover:-rotate-45 group-hover:bg-accent">
+                <BsArrowDownRight className="text-3xl text-primary" />
                 </Link>
               </div>
               {/* heading */}
-              <h2 className="text-3xl font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{item.title}</h2>
+              <h2 className="text-3xl font-bold leading-none text-white transition-all duration-500 group-hover:text-accent">{item.title}</h2>
               {/* description */}
               <p>{item.description} </p>
               {/* border */}
-              <div className="border border-white/20 w-full" />
+              <div className="w-full border border-white/20" />
             </div>
 
           ))}

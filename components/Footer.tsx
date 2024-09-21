@@ -2,6 +2,7 @@
 import * as dt from "@/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const date = new Date();
@@ -32,31 +33,29 @@ const Footer = () => {
             <h3 className="mb-2 text-xl font-bold text-accent">Liens Utiles</h3>
             {dt.navLinks.map((item, index) => (
               <li className="mb-1 text-sm capitalize text-white/60">
-              <Link href={item.href}>
-                  {item.name}
-              </Link>
-                </li>
+                <Link href={item.href}>{item.name}</Link>
+              </li>
             ))}
           </ul>
           <ul>
             <h3 className="mb-2 text-xl font-bold text-accent">Projets</h3>
             {dt.cv.projets.map((item, index) => (
               <li className="mb-1 text-sm capitalize text-white/60">
-              <Link href={item.github} target="_blank">
+                <Link href={item.github} target="_blank">
                   {item.title}
-              </Link>
-                </li>
+                </Link>
+              </li>
             ))}
           </ul>
           <ul>
             <h3 className="mb-2 text-xl font-bold text-accent">Contact</h3>
             {dt.contact.info.map((item, index) => (
-                <li className="mb-2 flex flex-shrink-0 flex-col items-start justify-start gap-1 text-white/60">
-                  <Link href={item.href}>
-                    <span className="text-xs text-white">{item.title}</span>
-                  </Link>
-                  <span className="text-xs">{item.description}</span>
-                </li>
+              <li className="mb-2 flex flex-shrink-0 flex-col items-start justify-start gap-1 text-white/60">
+                <Link href={item.href}>
+                  <span className="text-xs text-white">{item.title}</span>
+                </Link>
+                <span className="text-xs">{item.description}</span>
+              </li>
             ))}
           </ul>
         </div>

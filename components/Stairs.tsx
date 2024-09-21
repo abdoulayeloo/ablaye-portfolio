@@ -1,5 +1,4 @@
-import { reverse } from "dns";
-import { animate, motion, reverseEasing } from "framer-motion";
+import { motion } from "framer-motion";
 
 const stairAnimation = {
   initial: { top: "0%" },
@@ -18,8 +17,8 @@ const Stairs = () => {
           exit="exit"
           transition={{
             duration: 0.3,
-            ease: "easeInOut",
             delay: index * 0.1,
+            ease: "easeInOut",
           }}
           className="relative h-full w-full bg-white"
         />
