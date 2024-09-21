@@ -15,7 +15,7 @@ export default function Home() {
           <div className="order-2 text-center xl:order-none xl:text-left">
             <span className="text-xl">Développeur web & Mobile</span>
             <h1 className="h1 mb-6">
-              Bonjour, Je suis <br /> <span className="text-accent">Ablaye </span>
+              Hello, Je suis <br /> <span className="text-accent">Ablaye </span>
             </h1>
             <p className="mb-6 max-w-[500px]">
               J'excelle dans la création de site web élégants et performantes
