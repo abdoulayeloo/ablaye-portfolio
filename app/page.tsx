@@ -7,7 +7,6 @@ import Link from "next/link";
 import { FiEye } from "react-icons/fi";
 
 export default function Home() {
-
   return (
     <section className="min-h-[70vh]">
       <div className="container mx-auto h-full">

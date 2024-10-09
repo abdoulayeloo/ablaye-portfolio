@@ -50,11 +50,13 @@ const Footer = () => {
           <ul>
             <h3 className="mb-2 text-xl font-bold text-accent">Contact</h3>
             {dt.contact.info.map((item, index) => (
-              <li className="mb-2 flex flex-shrink-0 flex-col items-start justify-start gap-1 text-white/60">
-                <Link href={item.href}>
+              <li className="mb-3 flex flex-shrink-0 flex-col items-start justify-start gap-1 text-white/60">
+                <Link className="text-xs" href={item.href}>
                   <span className="text-xs text-white">{item.title}</span>
                 </Link>
-                <span className="text-xs">{item.description}</span>
+                <Link className="text-xs" href={item.href}>
+                  {item.description}
+                </Link>
               </li>
             ))}
           </ul>

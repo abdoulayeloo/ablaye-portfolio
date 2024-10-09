@@ -5,7 +5,6 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 import { navLinks } from "@/data";
-import { link } from "fs";
 import { useState } from "react";
 
 const MobileNav = () => {

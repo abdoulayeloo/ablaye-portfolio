@@ -392,8 +392,8 @@ export const contact = {
     {
       icon: FaPhoneAlt,
       title: "Téléphone",
-      href: "https://wa.me/+221777780620",
-      description: "(+221) 77 778 06 20",
+      href: "https://wa.me/+221784506111",
+      description: "(+221) 78 450 61 11",
     },
     {
       icon: FaEnvelope,
