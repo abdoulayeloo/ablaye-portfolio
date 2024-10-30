@@ -25,7 +25,7 @@ const Footer = () => {
             <h3 className="mb-2 text-xl font-bold text-accent">Services</h3>
             {dt.services.map((item, index) => (
               <li className="mb-1 text-sm text-white/60">
-                <Link href="/services">{item.title}</Link>
+                <Link href="https://www.likagroupe.com/solutions">{item.title}</Link>
               </li>
             ))}
           </ul>
