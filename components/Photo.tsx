@@ -15,7 +15,7 @@ const Photo = () => {
         className="absolute h-[298px] w-[298px] overflow-hidden rounded-full mix-blend-lighten xl:h-[498px] xl:w-[498px]"
       >
         <Image
-          className="object-contain opacity-20"
+          className="object-contain brightness-75"
           priority
           quality={"100"}
           src="/assets/photo-3.png"

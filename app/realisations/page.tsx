@@ -104,7 +104,7 @@ const page = () => {
                       {/* image */}
                       <div className="relative h-full w-full">
                         <Image
-                          src="https://via.placeholder.com/460"
+                          src="https://placehold.co/460.png"
                           fill
                           alt=""
                           className="object-cover"
