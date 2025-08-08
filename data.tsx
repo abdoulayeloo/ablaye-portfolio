@@ -155,7 +155,7 @@ export const cv = {
       },
       {
         fieldName: "Téléphone",
-        fieldValue: "(+221) 77 778 06 20",
+        fieldValue: "(+221) 77 727 63 39",
         fieldIcon: FaPhone,
       },
       {
@@ -175,7 +175,7 @@ export const cv = {
       },
       {
         fieldName: "Email",
-        fieldValue: "faarame@gmail.com",
+        fieldValue: "contact@ifarame.com",
         fieldIcon: FaAt,
       },
       {
