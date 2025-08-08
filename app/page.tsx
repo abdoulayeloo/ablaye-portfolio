@@ -17,8 +17,8 @@ export default function Home() {
               Hello, Je suis <br /> <span className="text-accent">Ablaye </span>
             </h1>
             <p className="mb-6 max-w-[500px]">
-              J'excelle dans la création de site web élégants et performants
-              avec une expertise dans des technologies variées.
+              J'excelle dans la création de plateformes web élégantes et performantes
+              avec une expertise dans des technologies variées telles que React, Next.js, Node.js, Firebase, Prisma, MongoDB...
             </p>
             <div className="flex flex-col items-center gap-8 xl:flex-row">
               <Link href={"/cv"}>

@@ -24,7 +24,7 @@ import {
   FaDev,
   FaLanguage,
 } from "react-icons/fa";
-import { SiNextdotjs, SiNodedotjs, SiTailwindcss } from "react-icons/si";
+import { SiNextdotjs, SiNodedotjs, SiPrisma, SiReacttable, SiSupabase, SiTailwindcss } from "react-icons/si";
 export const navLinks = [
   {
     name: "Accueil",
@@ -304,14 +304,23 @@ export const cv = {
         skillName: "Laravel",
       },
       {
-        icon: FaWordpress,
-        skillName: "WordPress",
-      },
-      {
         icon: FaGit,
         skillName: "Git",
       },
+      {
+        icon: SiPrisma,
+        skillName: "Prisma",
+      },
+      {
+        icon: SiSupabase,
+        skillName: "Supabase",
+      },
+      {
+        icon: SiReacttable,
+        skillName: "Reacttable",
+      },
     ],
+
   },
   projets: [
     {
@@ -393,19 +402,19 @@ export const contact = {
       icon: FaPhoneAlt,
       title: "Téléphone",
       href: "https://wa.me/+221784506111",
-      description: "(+221) 78 450 61 11",
+      description: "(+221) 77 727 63 39",
     },
     {
       icon: FaEnvelope,
       title: "Email",
-      href: "mailto:faarame@gmail.com",
-      description: "faarame@gmail.com",
+      href: "mailto:contact@ifarame.com",
+      description: "contact@ifarame.com",
     },
     {
       icon: FaMapMarkedAlt,
       title: "Adresse",
       href: "https://maps.app.goo.gl/2febQg51DCKzMPyg7", 
-      description: "HLM Paris N•67 Guédiawaye, Dakar",
+      description: "Dakar/Sénégal",
     },
   ],
 };

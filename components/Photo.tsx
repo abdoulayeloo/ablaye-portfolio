@@ -18,7 +18,7 @@ const Photo = () => {
           className="object-contain brightness-75"
           priority
           quality={"100"}
-          src="/assets/photo-3.png"
+          src="/assets/ablaye-portfolio-hr.png"
           fill
           alt="Photo"
         />
